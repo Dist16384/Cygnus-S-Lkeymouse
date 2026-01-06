@@ -118,10 +118,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans    &trans    &trans    &trans                        &kp LC(W)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans    &trans
-&trans  &mkp MB2  &mkp MB1  &mkp MB1  &mkp MB1  &trans      &trans  &mkp MB3   &mkp MB1         &mkp MB1           &mkp MB2  &trans
-&trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans     &mkp MB4         &mkp MB5           &trans    &trans
-&trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans                                                   &trans
+&trans  &trans    &trans    &trans    &trans                        &kp LC(W)          &kp RIGHT_ALT  &trans    &kp RIGHT_GUI  &trans
+&trans  &mkp MB2  &mkp MB1  &mkp MB1  &mkp MB1  &trans      &trans  &mkp MB3           &mkp MB1       &mkp MB1  &mkp MB2       &trans
+&trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans             &mkp MB4       &mkp MB5  &trans         &trans
+&trans  &trans    &trans    &trans    &trans    &trans      &trans  &kp RIGHT_CONTROL                                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LS(LEFT_ARROW) LS(RIGHT_ARROW)>;

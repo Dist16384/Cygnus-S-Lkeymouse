@@ -155,7 +155,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
         };
     };
 };

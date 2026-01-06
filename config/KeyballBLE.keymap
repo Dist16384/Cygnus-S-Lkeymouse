@@ -23,9 +23,9 @@
             key-positions = <20 21>;
         };
 
-        scrol {
-            bindings = <&to 8>;
-            key-positions = <19 20>;
+        scr {
+            bindings = <&tog 8>;
+            key-positions = <23 24>;
         };
     };
 

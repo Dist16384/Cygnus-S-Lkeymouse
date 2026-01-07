@@ -64,7 +64,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R        &kp T                                                    &kp Y            &lt 5 U              &lt 5 I      &lt 5 O     &mt RIGHT_SHIFT P
-&kp A             &lt 4 S       &kp D         &kp F        &lt 8 G   &tog 5                    &kp AT               &kp H            &kp J                &lt 4 K      &lt 4 L     &lt 3 MINUS
+&kp A             &lt 4 S       &kp D         &kp F        &lt 8 G   &kt LEFT_SHIFT            &kp AT               &kp H            &kp J                &lt 4 K      &lt 4 L     &lt 3 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B     &lt_to_layer_0 6 TAB      &mt RIGHT_ALT COLON  &mt RIGHT_GUI N  &mt RIGHT_CONTROL M  &lt 2 COMMA  &kp PERIOD  &kp PLUS
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 SPACE  &mkp MB1  &lt 2 LC(SPACE)           &kp BACKSPACE        &lt 1 ENTER                                                    &kp DEL
             >;
@@ -75,9 +75,9 @@
         FUNCTION {
             bindings = <
 &kp F5              &kp F4   &kp F3   &kp F2   &kp F1                               &trans  &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &kp CAPS
-&kp F10             &kp F9   &kp F8   &kp F7   &kp F6   &kp F13             &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&mt LEFT_SHIFT F11  &kp F17  &kp F16  &kp F15  &kp F14  &kp F20             &trans  &trans  &kp RG(Q)       &kp RG(W)       &kp RG(M)        &kp RIGHT_SHIFT
-&kp F12             &kp F19  &kp F18  &trans   &trans   &kp LEFT_SHIFT      &trans  &trans                                                   &trans
+&kp F10             &kp F9   &kp F8   &kp F7   &kp F6   &kt LEFT_SHIFT      &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&mt LEFT_SHIFT F11  &kp F17  &kp F16  &kp F15  &kp F14  &kp F13             &trans  &trans  &kp RG(Q)       &kp RG(W)       &kp RG(M)        &kp RIGHT_SHIFT
+&kp F12             &kp F19  &kp F18  &kp F20  &trans   &kp LEFT_SHIFT      &trans  &trans                                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
@@ -150,7 +150,7 @@
         layer_8 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &to 0       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;

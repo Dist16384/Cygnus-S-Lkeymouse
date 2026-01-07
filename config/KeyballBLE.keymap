@@ -23,7 +23,7 @@
             key-positions = <20 21>;
         };
 
-        MB2 {
+        mb2_combo {
             bindings = <&mkp MB2>;
             key-positions = <19 18>;
         };

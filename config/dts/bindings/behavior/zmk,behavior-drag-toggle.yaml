@@ -1,1 +1,5 @@
+description: Drag toggle behavior
+compatible: "zmk,behavior-drag-toggle"
 
+"#binding-cells":
+  const: 0

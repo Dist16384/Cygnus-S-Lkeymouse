@@ -72,16 +72,15 @@
             compatible = "zmk,behavior-macro";
             label = "DRAG_ON";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&mkp MB1>;
+            bindings = <&macro_press &mkp MB1>;
         };
-
         /* Release MB1 */
 
         drag_off: drag_off {
             compatible = "zmk,behavior-macro";
             label = "DRAG_OFF";
             #binding-cells = <0>;
-            bindings = <&macro_release>, <&mkp MB1>;
+            bindings = <&macro_release &mkp MB1>;
         };
     };
 

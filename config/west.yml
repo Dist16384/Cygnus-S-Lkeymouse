@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: Dist16384
       url-base: https://github.com/Dist16384
+    - name: eincode0
+      url-base: https://github.com/eincode0
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -11,6 +13,9 @@ manifest:
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: Dist16384
+      revision: main
+    - name: zmk-drag-toggle
+      remote: eincode0
       revision: main
   self:
     path: config

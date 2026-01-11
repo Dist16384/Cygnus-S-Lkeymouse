@@ -144,7 +144,6 @@
         };
 
         drag_toggle: drag_toggle {
-            drag_toggle: drag_toggle {
             compatible = "zmk,behavior-drag-toggle";
             label = "DRAG_TOGGLE";
             #binding-cells = <0>;

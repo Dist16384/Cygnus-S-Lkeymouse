@@ -42,7 +42,6 @@
             bindings = <&tog 8>;
             key-positions = <13 14>; /* F + G */
         };
-
     };
 
     macros {
@@ -77,6 +76,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LT_MKP";
             bindings = <&mo>, <&mkp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
@@ -85,10 +85,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_MKP";
             bindings = <&kp>, <&mkp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-
     };
 
     keymap {
@@ -96,10 +96,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W               &kp E         &kp R                   &kp T                                                                    &kp Y                   &kp U   &lt_to_layer_0 5 I      &kp O        &mt RIGHT_SHIFT P
-&kp A             &lt_to_layer_0 4 S  &kp D         &kp F                   &lt_to_layer_0 7 G  &kt LEFT_SHIFT                  &kp AT               &kp H                   &kp J                &kp K      &lt_to_layer_0 4 L        &lt_to_layer_0 3 MINUS
+&kp Q             &kp W               &kp E         &kp R                   &kp T                                                                    &kp Y                   &kp U                &lt_to_layer_0 5 I      &kp O                     &mt RIGHT_SHIFT P
+&kp A             &lt_to_layer_0 4 S  &kp D         &kp F                   &lt_to_layer_0 7 G  &kt LEFT_SHIFT                  &kp AT               &kp H                   &kp J                &kp K                   &lt_to_layer_0 4 L        &lt_to_layer_0 3 MINUS
 &mt LEFT_SHIFT Z  &kp X               &kp C         &kp V                   &mt LA(LEFT_GUI) B  &lt_to_layer_0 6 TAB            &mt RIGHT_ALT COLON  &mt RIGHT_GUI N         &mt RIGHT_CONTROL M  &lt_to_layer_0 2 COMMA  &mt RS(RIGHT_GUI) PERIOD  &mt RC(RIGHT_GUI) PLUS
-&kp LCTRL         &kp LEFT_WIN        &kp LEFT_ALT  &lt_to_layer_0 3 SPACE  &mkp MB1            &lt_to_layer_0 2 LC(SPACE)      &kp BACKSPACE        &lt_to_layer_0 1 ENTER                                                                         &mt LA(RIGHT_GUI) DEL
+&kp LCTRL         &kp LEFT_WIN        &kp LEFT_ALT  &lt_to_layer_0 3 SPACE  &lt_mkp 0 MB1       &lt_to_layer_0 2 LC(SPACE)      &kp BACKSPACE        &lt_to_layer_0 1 ENTER                                                                         &mt LA(RIGHT_GUI) DEL
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
@@ -162,10 +162,10 @@
 
         layer_6 {
             bindings = <
-&trans  &trans  &trans  &trans               &trans                                     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans               &trans         &trans      &studio_unlock  &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &kp LA(LG(LC(ESC)))  &kp LC(LG(Q))  &trans      &bootloader     &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans               &trans         &trans      &trans          &trans                                                  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans           &trans                                     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans           &trans         &trans      &studio_unlock  &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &kp LA(LG(ESC))  &kp LC(LG(Q))  &trans      &bootloader     &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans  &trans  &trans           &trans         &trans      &trans          &trans                                                  &bt BT_CLR_ALL
             >;
         };
 
@@ -181,35 +181,38 @@
         };
 
         /* Photoshop */
+
         PS_PHOTO {
             bindings = <
-                &kp V             &kp M               &kp C         &kp J               &kp B               &kp LG(NUMBER_0)        &kp LG(NUMBER_1)        &kp LG(L)               &kp LG(M)               &kp LG(U)
-                &kp LG(J)         &kp LG(LS(N))       &kp LG(E)     &kp LG(COMMA)       &kp LG(DOT)         &to 0          &kp ESC                &trans                  &trans                  &trans                  &trans                  &trans
-                &kp LG(Z)         &kp LG(LS(Z))       &kp LG(LA(Z)) &kp LG(LS(S))       &kp LG(LA(S))       &trans                 &trans                 &trans                  &trans                  &trans                  &trans                  &trans
-                &trans            &trans              &trans        &mo 9               &trans              &mo 10                 &trans                 &trans                                               &trans
+&kp V      &kp M          &kp C          &kp J          &kp B                               &kp LG(NUMBER_0)  &kp LG(NUMBER_1)  &kp LG(L)  &kp LG(M)  &kp LG(U)
+&kp LG(J)  &kp LG(LS(N))  &kp LG(E)      &kp LG(COMMA)  &kp LG(DOT)    &to 0       &kp ESC  &trans            &trans            &trans     &trans     &trans
+&kp LG(Z)  &kp LG(LS(Z))  &kp LG(LA(Z))  &kp LG(LS(S))  &kp LG(LA(S))  &trans      &trans   &trans            &trans            &trans     &trans     &trans
+&trans     &trans         &trans         &mo 9          &trans         &mo 10      &trans   &trans                                                    &trans
             >;
+
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
         };
 
         PS_DRAW {
             bindings = <
-                &kp B             &kp E               &kp I         &kp X               &kp D               &trans                 &trans                 &trans                  &trans                  &trans
-                &kp V  &kp M  &kp L  &kp J  &kp C  &kp LG(Z)  &trans  &trans  &trans  &trans  &trans  &trans
-                &kp Z             &kp A               &kp S         &kp F               &kp G               &trans                 &trans                 &trans                  &trans                  &trans                  &trans                  &trans
-                &trans            &trans              &trans        &trans              &trans              &trans                 &trans                 &trans                                               &trans
+&kp B   &kp E   &kp I   &kp X   &kp D                          &trans  &trans  &trans  &trans  &trans
+&kp V   &kp M   &kp L   &kp J   &kp C   &kp LG(Z)      &trans  &trans  &trans  &trans  &trans  &trans
+&kp Z   &kp A   &kp S   &kp F   &kp G   &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans                          &trans
             >;
+
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
         };
 
         PS_BRUSH {
             bindings = <
-                &trans            &trans              &trans        &trans              &trans              &trans                 &trans                 &trans                  &trans                  &trans
-                &trans  &trans  &trans  &trans  &trans  &kp LG(Z)  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans            &trans              &trans        &trans              &trans              &trans                 &trans                 &trans                  &trans                  &trans                  &trans                  &trans
-                &trans            &trans              &trans        &trans              &trans              &trans                 &trans                 &trans                                               &trans
+&trans  &trans  &trans  &trans  &trans                         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &kp LG(Z)      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans                          &trans
             >;
+
             sensor-bindings = <&inc_dec_kp LBKT RBKT>;
         };
-
     };
 };

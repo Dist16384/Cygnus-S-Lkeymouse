@@ -57,7 +57,7 @@
 
         drag_toggle_combo {
             bindings = <&drag_toggle>;
-            key-positions = <11 12>; /* 左手 最下段：右親指3キーの「真ん中＋右」 */
+            key-positions = <11 12>; 
         };
 
         drag_toggle_combo_2 {
@@ -144,8 +144,10 @@
         };
 
         drag_toggle: drag_toggle {
+            drag_toggle: drag_toggle {
             compatible = "zmk,behavior-drag-toggle";
             label = "DRAG_TOGGLE";
+            #binding-cells = <0>;
         };
     };
 

@@ -5,9 +5,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define KB_LAYER_MOUSE 4
-#define KB_LAYER_SCROLL 5
-#define KB_LAYER_NUM 6
+#define MOUSE 4
+#define SCROLL 5
+#define NUM 6
 
 &mt {
     flavor = "balanced";
@@ -54,7 +54,9 @@
         };
 
         /* Drag ON (MB1 press) */
-
+        drag_on_combo {
+            bindings = <&drag_on>;
+            key-positions = <38 39>; /* 左手 最下段：右親指3キーの「真ん中＋右」 */
         };
     };
 
@@ -67,15 +69,14 @@
         };
 
         /* Keep MB1 pressed */
-
         drag_on: drag_on {
             compatible = "zmk,behavior-macro";
             label = "DRAG_ON";
             #binding-cells = <0>;
             bindings = <&macro_press &mkp MB1>;
         };
-        /* Release MB1 */
 
+        /* Release MB1 */
         drag_off: drag_off {
             compatible = "zmk,behavior-macro";
             label = "DRAG_OFF";
@@ -99,7 +100,6 @@
             label = "ROTATE";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-
             tap-ms = <20>;
         };
 
@@ -122,14 +122,13 @@
         };
 
         /* Tap: normal MB1 click / Hold: drag off (release MB1) */
-
         mb1_or_dragoff: mb1_or_dragoff {
             compatible = "zmk,behavior-hold-tap";
             label = "MB1_OR_DRAGOFF";
+
             bindings = <&drag_off>, <&mkp>;
 
             /* hold-tap は const で 2 固定 */
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
@@ -141,9 +140,9 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                   &kp T                                                                    &kp Y                   &kp U                &lt 5 I                 &kp O                     &mt RIGHT_SHIFT P
-&kp A             &lt 4 S       &kp D         &kp F                   &lt 7 G             &kt LEFT_SHIFT                  &kp AT               &kp H                   &kp J                &kp K                   &lt 4 L                   &lt 3 MINUS
+&kp A             &lt 4 S       &kp D         &kp F                   &lt_to_layer_0 7 G  &kt LEFT_SHIFT                  &kp AT               &kp H                   &kp J                &kp K                   &lt 4 L                   &lt 3 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &mt LA(LEFT_GUI) B  &lt_to_layer_0 6 TAB            &mt RIGHT_ALT COLON  &mt RIGHT_GUI N         &mt RIGHT_CONTROL M  &lt_to_layer_0 2 COMMA  &mt RS(RIGHT_GUI) PERIOD  &mt RC(RIGHT_GUI) PLUS
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 SPACE  &mkp MB1            &lt_to_layer_0 2 LC(SPACE)      &kp BACKSPACE        &lt_to_layer_0 1 ENTER                                                                         &mt LA(RIGHT_GUI) DEL
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 SPACE  &mb1_or_dragoff 0 MB1 &lt_to_layer_0 2 LC(SPACE)      &kp BACKSPACE        &lt_to_layer_0 1 ENTER                                                                         &mt LA(RIGHT_GUI) DEL
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;

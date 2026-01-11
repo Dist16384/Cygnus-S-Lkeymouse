@@ -1,6 +1,0 @@
-description: Drag toggle behavior
-compatible: "zmk,behavior-drag-toggle"
-
-include: behavior.yaml
-
-binding-cells: []

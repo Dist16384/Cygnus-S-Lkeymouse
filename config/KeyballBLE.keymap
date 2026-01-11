@@ -55,14 +55,6 @@
 
         /* Drag ON (MB1 press) */
 
-        drag_toggle_combo {
-            bindings = <&drag_toggle>;
-            key-positions = <11 12>; 
-        };
-
-        drag_toggle_combo_2 {
-            bindings = <&drag_toggle>;
-            key-positions = <20 19>;
         };
     };
 
@@ -141,12 +133,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
-
-        drag_toggle: drag_toggle {
-            compatible = "zmk,behavior-drag-toggle";
-            label = "DRAG_TOGGLE";
-            #binding-cells = <0>;
         };
     };
 

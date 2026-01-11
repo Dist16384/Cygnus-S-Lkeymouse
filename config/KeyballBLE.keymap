@@ -119,14 +119,17 @@
             tapping-term-ms = <200>;
         };
 
-        mb1_or_dragoff: mb1_or_dragoff {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MB1_OR_DRAGOFF";
-            bindings = <&drag_off>, <&mkp MB1>;
+       mb1_or_dragoff: mb1_or_dragoff {
+           compatible = "zmk,behavior-hold-tap";
+           label = "MB1_OR_DRAGOFF";
 
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-        };
+           /* hold = drag_off（引数なし）
+           tap  = mkp MB1（引数1個） */
+           bindings = <&drag_off>, <&mkp>;
+
+           #binding-cells = <1>;
+           tapping-term-ms = <200>;
+};
     };
 
     keymap {

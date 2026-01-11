@@ -15,7 +15,7 @@
 };
 
 / {
-    combos {
+        combos {
         compatible = "zmk,combos";
 
         double_quotation {
@@ -53,10 +53,10 @@
             key-positions = <9 8>;
         };
 
-　　　　　drag_on_combo {
-   　　　　　 bindings = <&drag_on>;
-   　　　　　 key-positions = <38 39>;  /* 左手 最下段：右親指3キーの「真ん中＋右」 */
-　　　　　};
+        drag_on_combo {
+            bindings = <&drag_on>;
+            key-positions = <38 39>; /* 左手 最下段：右親指3キーの「真ん中＋右」 */
+        };
     };
 
        macros {
@@ -70,12 +70,14 @@
         drag_on: drag_on {
             compatible = "zmk,behavior-macro";
             label = "DRAG_ON";
+            #binding-cells = <0>;
             bindings = <&macro_press &mkp MB1>;
         };
 
         drag_off: drag_off {
             compatible = "zmk,behavior-macro";
             label = "DRAG_OFF";
+            #binding-cells = <0>;
             bindings = <&macro_release &mkp MB1>;
         };
     };
@@ -135,7 +137,7 @@
 &kp Q             &kp W         &kp E         &kp R                   &kp T                                                                    &kp Y                   &kp U                &lt 5 I                 &kp O                     &mt RIGHT_SHIFT P
 &kp A             &lt 4 S       &kp D         &kp F                   &lt_to_layer_0 7 G  &kt LEFT_SHIFT                  &kp AT               &kp H                   &kp J                &kp K                   &lt 4 L                   &lt 3 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &mt LA(LEFT_GUI) B  &lt_to_layer_0 6 TAB            &mt RIGHT_ALT COLON  &mt RIGHT_GUI N         &mt RIGHT_CONTROL M  &lt_to_layer_0 2 COMMA  &mt RS(RIGHT_GUI) PERIOD  &mt RC(RIGHT_GUI) PLUS
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 SPACE  &mkp MB1            &lt_to_layer_0 2 LC(SPACE)      &kp BACKSPACE        &lt_to_layer_0 1 ENTER                                                                         &mt LA(RIGHT_GUI) DEL
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 SPACE  &mb1_or_dragoff     &lt_to_layer_0 2 LC(SPACE)      &kp BACKSPACE        &lt_to_layer_0 1 ENTER                                                                         &mt LA(RIGHT_GUI) DEL      &kp BACKSPACE        &lt_to_layer_0 1 ENTER                                                                         &mt LA(RIGHT_GUI) DEL
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;

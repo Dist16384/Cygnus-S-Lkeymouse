@@ -220,10 +220,10 @@
 
         MOUSE {
             bindings = <
-&trans                  &trans    &kp PAGE_UP  &kp PAGE_DOWN  &kp LG(R)                                     &kp LG(R)  &kp PAGE_UP  &kp PAGE_DOWN   &trans  &trans
-&lt_to_layer_0 5 SPACE  &mkp MB2  &mkp MB1     &mkp MB1       &mkp MB1        &mkp MB2       &kp LC(LS(W))  &mkp MB2   &mkp MB1     &dragkey 0 MB1  &trans  &lt_to_layer_0 5 SPACE
-&trans                  &trans    &mkp MB4     &mkp MB5       &mkp MB3        &mkp MB1       &trans         &mkp MB3   &mkp MB4     &mkp MB5        &trans  &trans
-&trans                  &trans    &trans       &drag_on       &dragkey 0 MB1  &drag_off      &to 0          &drag_off                                       &trans
+&trans                  &trans    &kp PAGE_UP  &kp PAGE_DOWN  &kp LG(R)                                     &kp LG(R)  &kp PAGE_UP  &kp PAGE_DOWN  &trans  &trans
+&lt_to_layer_0 5 SPACE  &mkp MB2  &mkp MB1     &mkp MB1       &mkp MB1        &mkp MB2       &kp LC(LS(W))  &mkp MB2   &mkp MB1     &mkp MB1       &trans  &lt_to_layer_0 5 SPACE
+&trans                  &trans    &mkp MB4     &mkp MB5       &mkp MB3        &mkp MB1       &trans         &mkp MB3   &mkp MB4     &mkp MB5       &trans  &trans
+&trans                  &trans    &trans       &drag_on       &dragkey 0 MB1  &drag_off      &to 0          &drag_off                                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LG(RBKT) LG(LBKT)>;

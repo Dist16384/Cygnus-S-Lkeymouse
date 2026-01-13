@@ -56,7 +56,7 @@
         /* Drag ON (MB1 press) */
 
         drag_on_combo {
-            bindings = <&drag_on2>;
+            bindings = <&none>;
             key-positions = <11 12>; /* 左手 最下段：右親指3キーの「真ん中＋右」 */
         };
 
@@ -66,7 +66,7 @@
         };
 
         drag_on_combo_2 {
-            bindings = <&drag_on2>;
+            bindings = <&none>;
             key-positions = <20 19>;
         };
     };
@@ -149,9 +149,9 @@
             hold-trigger-on-release;
         };
 
-        drag_on2: drag_on2 {
+        dragkey: dragkey {
             compatible = "zmk,behavior-hold-tap";
-            label = "DRAG_ON2";
+            label = "DRAGKEY";
             bindings = <&drag_on>, <&mkp>;
 
             #binding-cells = <2>;
@@ -208,10 +208,10 @@
 
         MOUSE {
             bindings = <
-&trans                  &trans    &kp PAGE_UP  &kp PAGE_DOWN  &kp LG(R)                                      &kp LG(R)  &kp PAGE_UP  &kp PAGE_DOWN    &trans  &trans
-&lt_to_layer_0 5 SPACE  &mkp MB2  &mkp MB1     &mkp MB1       &mkp MB1         &mkp MB2       &kp LC(LS(W))  &mkp MB2   &mkp MB1     &drag_on2 0 MB1  &trans  &lt_to_layer_0 5 SPACE
-&trans                  &trans    &mkp MB4     &mkp MB5       &mkp MB3         &mkp MB1       &trans         &mkp MB3   &mkp MB4     &mkp MB5         &trans  &trans
-&trans                  &trans    &trans       &drag_on       &drag_on2 0 MB1  &drag_off      &to 0          &drag_off                                        &trans
+&trans                  &trans    &kp PAGE_UP  &kp PAGE_DOWN  &kp LG(R)                                     &kp LG(R)  &kp PAGE_UP  &kp PAGE_DOWN   &trans  &trans
+&lt_to_layer_0 5 SPACE  &mkp MB2  &mkp MB1     &mkp MB1       &mkp MB1        &mkp MB2       &kp LC(LS(W))  &mkp MB2   &mkp MB1     &dragkey 0 MB1  &trans  &lt_to_layer_0 5 SPACE
+&trans                  &trans    &mkp MB4     &mkp MB5       &mkp MB3        &mkp MB1       &trans         &mkp MB3   &mkp MB4     &mkp MB5        &trans  &trans
+&trans                  &trans    &trans       &drag_on       &dragkey 0 MB1  &drag_off      &to 0          &drag_off                                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LG(RBKT) LG(LBKT)>;

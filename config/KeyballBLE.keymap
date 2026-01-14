@@ -53,23 +53,6 @@
             bindings = <&tog 4>;
             key-positions = <9 8>;
         };
-
-        /* Drag ON (MB1 press) */
-
-        drag_on_combo {
-            bindings = <&none>;
-            key-positions = <11 12>; /* 左手 最下段：右親指3キーの「真ん中＋右」 */
-        };
-
-        drag_off_combo {
-            bindings = <&drag_off>;
-            key-positions = <39 38>;
-        };
-
-        drag_on_combo_2 {
-            bindings = <&dragkey 0 MB1>;
-            key-positions = <20 19>;
-        };
     };
 
     macros {
@@ -78,24 +61,6 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
-        };
-
-        /* Keep MB1 pressed */
-
-        drag_on: drag_on {
-            compatible = "zmk,behavior-macro";
-            label = "DRAG_ON";
-            #binding-cells = <0>;
-            bindings = <&macro_press>, <&mkp MB1>;
-        };
-
-        /* Release MB1 */
-
-        drag_off: drag_off {
-            compatible = "zmk,behavior-macro";
-            label = "DRAG_OFF";
-            #binding-cells = <0>;
-            bindings = <&macro_release>, <&mkp MB1>;
         };
     };
 
@@ -136,38 +101,35 @@
             tapping-term-ms = <200>;
         };
 
-        /* Tap: normal MB1 click / Hold: drag off (release MB1) */
+        /* ===== MB1 全置換（Tap=クリック / Hold(離した瞬間)=ドラッグ維持） ===== */
 
-        mb1_or_dragoff: mb1_or_dragoff {
+        sk_drag: sk_drag {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SK_DRAG";
+            bindings = <&mkp>;
+            #binding-cells = <1>;
+
+            /* あなたの環境では必須 */
+            release-after-ms = <600000>; /* 10分（実質OFF運用） */
+
+            quick-release;
+            ignore-modifiers;
+        };
+
+        mb1_smart: mb1_smart {
             compatible = "zmk,behavior-hold-tap";
-            label = "MB1_OR_DRAGOFF";
-            bindings = <&drag_off>, <&mkp>;
+            label = "MB1_SMART";
+
+            /* Tap: &mkp / Hold: &sk_drag */
+            bindings = <&mkp>, <&sk_drag>;
 
             /* hold-tap は const で 2 固定 */
-
             #binding-cells = <2>;
+
             tapping-term-ms = <200>;
             hold-trigger-on-release;
-        };
-
-        dragkey: dragkey {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DRAGKEY";
-            bindings = <&drag_on>, <&mkp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <350>;
-            require-prior-idle-ms = <150>;
             flavor = "balanced";
-        };
-
-        dragkey_off: dragkey_off {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DRAGKEY_OFF";
-            bindings = <&drag_off>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            require-prior-idle-ms = <80>;
         };
     };
 
@@ -179,7 +141,7 @@
 &kp Q             &kp W         &kp E         &kp R                   &kp T                                                              &kp Y                   &kp U                &lt 5 I                 &kp O                     &mt RIGHT_SHIFT P
 &kp A             &kp S         &kp D         &kp F                   &lt_to_layer_0 7 G  &kt LEFT_SHIFT            &kp AT               &kp H                   &kp J                &kp K                   &lt 4 L                   &lt 3 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &mt LA(LEFT_GUI) B  &lt_to_layer_0 6 TAB      &mt RIGHT_ALT COLON  &mt RIGHT_GUI N         &mt RIGHT_CONTROL M  &lt_to_layer_0 2 COMMA  &mt RS(RIGHT_GUI) PERIOD  &mt RC(RIGHT_GUI) PLUS
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 SPACE  &mkp MB1            &lt 2 LC(SPACE)           &kp BACKSPACE        &lt_to_layer_0 1 ENTER                                                                         &mt LA(RIGHT_GUI) DEL
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 SPACE  &mb1_smart 0 MB1    &lt 2 LC(SPACE)           &kp BACKSPACE        &lt_to_layer_0 1 ENTER                                                                         &mt LA(RIGHT_GUI) DEL
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
@@ -207,11 +169,12 @@
             sensor-bindings = <&inc_dec_kp LC(Y) LS(Z)>;
         };
 
+        /* 数字を全部 KP_NUMBER に置換済み */
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                              &kp EQUAL  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &kp MINUS      &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RG(C)
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &kp DOWN_ARROW  &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &kp ASTERISK   &kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RG(V)
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                              &kp EQUAL        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &kp MINUS      &kp PLUS   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp RG(C)
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &kp DOWN_ARROW  &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &kp ASTERISK   &kp SLASH  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp RG(V)
 &trans          &trans                  &trans          &to 0                    &trans   &trans      &kp BACKSPACE  &kp ENTER                                            &kp RG(Z)
             >;
 
@@ -221,9 +184,9 @@
         MOUSE {
             bindings = <
 &trans                  &trans    &kp PAGE_UP  &kp PAGE_DOWN  &kp LG(R)                                     &kp LG(R)  &kp PAGE_UP  &kp PAGE_DOWN  &trans  &trans
-&lt_to_layer_0 5 SPACE  &mkp MB2  &mkp MB1     &mkp MB1       &mkp MB1        &mkp MB2       &kp LC(LS(W))  &mkp MB2   &mkp MB1     &mkp MB1       &trans  &lt_to_layer_0 5 SPACE
-&trans                  &trans    &mkp MB4     &mkp MB5       &mkp MB3        &mkp MB1       &trans         &mkp MB3   &mkp MB4     &mkp MB5       &trans  &trans
-&trans                  &trans    &trans       &drag_on       &dragkey 0 MB1  &drag_off      &to 0          &drag_off                                      &trans
+&lt_to_layer_0 5 SPACE  &mkp MB2  &mb1_smart 0 MB1  &mb1_smart 0 MB1  &mb1_smart 0 MB1  &mkp MB2       &kp LC(LS(W))  &mkp MB2   &mb1_smart 0 MB1  &mb1_smart 0 MB1  &trans  &lt_to_layer_0 5 SPACE
+&trans                  &trans    &mkp MB4     &mkp MB5       &mkp MB3            &mb1_smart 0 MB1  &trans         &mkp MB3   &mkp MB4        &mkp MB5         &trans  &trans
+&trans                  &trans    &trans       &trans         &trans              &trans          &to 0          &trans                                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LG(RBKT) LG(LBKT)>;
@@ -252,9 +215,9 @@
         layer_7 {
             bindings = <
 &trans                     &kp LC(W)  &kp LC(W)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)                             &kp LC(W)      &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans  &trans
-&lt_to_layer_0 5 KP_MINUS  &mkp MB1   &mkp MB1   &mkp MB2         &trans             &mkp MB3      &trans       &mkp MB3       &mkp MB1         &mkp MB1           &trans  &lt_to_layer_0 5 KP_MINUS
-&trans                     &trans     &mkp MB4   &mkp MB5         &mkp MB5           &trans        &trans       &trans         &mkp MB4         &mkp MB5           &trans  &trans
-&trans                     &trans     &trans     &to 0            &trans             &trans        &kp PAGE_UP  &kp PAGE_DOWN                                              &trans
+&lt_to_layer_0 5 KP_MINUS  &mb1_smart 0 MB1  &mb1_smart 0 MB1  &mkp MB2         &trans             &mkp MB3      &trans       &mkp MB3       &mb1_smart 0 MB1  &mb1_smart 0 MB1  &trans  &lt_to_layer_0 5 KP_MINUS
+&trans                     &trans     &mkp MB4        &mkp MB5         &mkp MB5           &trans        &trans       &trans         &mkp MB4         &mkp MB5           &trans  &trans
+&trans                     &trans     &trans          &to 0            &trans             &trans        &kp PAGE_UP  &kp PAGE_DOWN                                              &trans
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;

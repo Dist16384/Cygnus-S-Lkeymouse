@@ -117,20 +117,18 @@
         };
 
         mb1_smart: mb1_smart {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MB1_SMART";
+    compatible = "zmk,behavior-hold-tap";
+    label = "MB1_SMART";
 
-            /* Tap: &mkp / Hold: &sk_drag */
-            bindings = <&mkp>, <&sk_drag>;
+    bindings = <&mkp>, <&sk_drag>;
+    #binding-cells = <2>;
 
-            /* hold-tap は const で 2 固定 */
-            #binding-cells = <2>;
+    tapping-term-ms = <320>;
+    hold-trigger-on-release;
 
-            tapping-term-ms = <320>;
-            hold-trigger-on-release;
-            flavor = "balanced";
-            require-prior-idle-ms = <200>;
-        };
+    flavor = "tap-preferred";
+    require-prior-idle-ms = <200>;
+};
     };
 
     keymap {

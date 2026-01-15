@@ -108,7 +108,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <120>;
             quick-tap-ms = <(-1)>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
         };
 
         ROTATE: ROTATE {
@@ -158,9 +158,9 @@
             bindings = <&drag_on>, <&mkp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             require-prior-idle-ms = <150>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             quick-tap-ms = <100>;
         };
 
@@ -179,8 +179,8 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                   &kp T                                                                    &kp Y                   &kp U                &lt_to_layer_0 5 I      &kp O                     &mt RIGHT_SHIFT P
-&kp A             &kp S         &kp D         &kp F                   &lt_to_layer_0 7 G  &kt LEFT_SHIFT                  &kp AT               &kp H                   &kp J                &kp K                   &lt_to_layer_0 4 L        &lt_to_layer_0 3 MINUS
+&kp Q             &kp W         &kp E         &kp R                   &kp T                                                                    &kp Y                   &kp U                &lt 5 I                 &kp O                     &mt RIGHT_SHIFT P
+&kp A             &kp S         &kp D         &kp F                   &lt 7 G             &kt LEFT_SHIFT                  &kp AT               &kp H                   &kp J                &kp K                   &lt 4 L                   &lt 3 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &mt LA(LEFT_GUI) B  &lt_to_layer_0 6 TAB            &mt RIGHT_ALT COLON  &mt RIGHT_GUI N         &mt RIGHT_CONTROL M  &lt_to_layer_0 2 COMMA  &mt RS(RIGHT_GUI) PERIOD  &mt RC(RIGHT_GUI) PLUS
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 SPACE  &mkp MB1            &lt_to_layer_0 2 LC(SPACE)      &kp BACKSPACE        &lt_to_layer_0 1 ENTER                                                                         &mt LA(RIGHT_GUI) DEL
             >;

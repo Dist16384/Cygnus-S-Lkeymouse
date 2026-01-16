@@ -56,11 +56,6 @@
 
         /* Drag ON (MB1 press) */
 
-        drag_on_combo {
-            bindings = <&none>;
-            key-positions = <11 12>; /* 左手 最下段：右親指3キーの「真ん中＋右」 */
-        };
-
         drag_off_combo {
             bindings = <&drag_off>;
             key-positions = <39 38>;

@@ -221,29 +221,22 @@
             sensor-bindings = <&inc_dec_kp LC(LS(DELETE)) LC(BACKSPACE)>;
         };
 
-MOUSE {
-    bindings = <
-/* 上段：左手スクロール（横＋縦） */
-&msc SCRL_LEFT         &msc SCRL_UP     &msc SCRL_DOWN   &msc SCRL_RIGHT  &kp LG(R)                                &kp LG(R)  &kp PAGE_UP  &kp PAGE_DOWN  &trans  &trans
+        MOUSE {
+            bindings = <
+&msc SCRL_LEFT          &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp LG(R)                                      &kp LG(R)  &kp PAGE_UP  &kp PAGE_DOWN  &trans  &trans
+&lt_to_layer_0 5 SPACE  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP     &mmv MOVE_RIGHT  &mkp MB2       &kp LC(LS(W))  &mkp MB2   &drag_off    &mkp MB1       &trans  &lt_to_layer_0 5 SPACE
+&trans                  &trans          &mkp MB4        &mkp MB5         &mkp MB3         &mkp MB1       &trans         &mkp MB3   &mkp MB4     &mkp MB5       &trans  &trans
+&trans                  &trans          &trans          &drag_on         &mkp MB1         &drag_off      &to 0          &drag_on                                       &trans
+            >;
 
-/* 2段目：左手カーソル移動（一定速度） */
-&lt_to_layer_0 5 SPACE  &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_UP     &mmv MOVE_RIGHT   &mkp MB2       &kp LC(LS(W))  &mkp MB2   &drag_off    &mkp MB1       &trans  &lt_to_layer_0 5 SPACE
-
-/* 3段目：ここは今のクリック系を維持（必要ならここにも移動やスクロール追加可） */
-&trans                 &trans          &mkp MB4         &mkp MB5         &mkp MB3          &mkp MB1       &trans         &mkp MB3   &mkp MB4     &mkp MB5       &trans  &trans
-
-/* 下段：ドラッグ系を維持 */
-&trans                 &trans          &trans           &drag_on         &mkp MB1          &drag_off      &to 0          &drag_on                                       &trans
-    >;
-
-    sensor-bindings = <&inc_dec_kp LG(RBKT) LG(LBKT)>;
-};
+            sensor-bindings = <&inc_dec_kp LG(RBKT) LG(LBKT)>;
+        };
 
         SCROLL {
             bindings = <
-&trans            &trans  &trans  &trans            &trans                                       &trans     &trans  &kp RIGHT_ALT  &kp RIGHT_CONTROL  &mt RIGHT_SHIFT P
-&trans            &trans  &trans  &trans            &trans  &to 0                 &trans         &trans     &trans  &trans         &trans             &trans
-&mt LEFT_SHIFT Z  &trans  &trans  &trans            &trans  &trans                &trans         &trans     &trans  &trans         &trans             &trans
+&trans            &trans  &trans  &trans            &trans                                       &trans     &kt RIGHT_ALT  &trans  &kp RIGHT_CONTROL  &mt RIGHT_SHIFT P
+&trans            &trans  &trans  &trans            &trans  &to 0                 &trans         &trans     &trans         &trans  &trans             &trans
+&mt LEFT_SHIFT Z  &trans  &trans  &trans            &trans  &trans                &trans         &trans     &trans         &trans  &trans             &trans
 &trans            &trans  &trans  &kp LG(NUMBER_9)  &trans  &kp LG(NUMBER_0)      &kp BACKSPACE  &kp ENTER                                            &trans
             >;
 

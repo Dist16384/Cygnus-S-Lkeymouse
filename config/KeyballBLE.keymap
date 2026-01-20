@@ -13,7 +13,7 @@
 &msc {
     time-to-max-speed-ms = <0>;
     acceleration-exponent = <0>;
- };
+};
 
 &mt {
     flavor = "balanced";
@@ -117,7 +117,7 @@
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
 
-            tap-ms = <20>;    
+            tap-ms = <20>;
         };
 
         lt_mkp: lt_mkp {
@@ -267,7 +267,7 @@
 &trans                     &trans     &trans     &to 0            &trans             &trans        &kp PAGE_UP  &kp PAGE_DOWN                                              &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         /* Photoshop */

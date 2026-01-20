@@ -255,7 +255,7 @@
 &trans                     &trans     &trans     &to 0            &trans             &trans        &kp PAGE_UP  &kp PAGE_DOWN                                              &trans
             >;
 
-            sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&ROTATE MOVE_DOWN MOVE_UP>;
         };
 
         /* Photoshop */

@@ -112,7 +112,12 @@
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
 
-            tap-ms = <20>;
+            tap-ms = <20>;    
+        };
+
+        &msc {
+            time-to-max-speed-ms = <0>;
+            acceleration-exponent = <0>;
         };
 
         lt_mkp: lt_mkp {

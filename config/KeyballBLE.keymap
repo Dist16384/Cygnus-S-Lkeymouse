@@ -112,7 +112,7 @@
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
 
-            tap-ms = <12>;
+            tap-ms = <20>;
         };
 
         lt_mkp: lt_mkp {

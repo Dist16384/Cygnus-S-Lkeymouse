@@ -10,6 +10,11 @@
 #define SCROLL 5
 #define NUM 6
 
+&msc {
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <0>;
+ };
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -113,11 +118,6 @@
             bindings = <&msc>, <&msc>;
 
             tap-ms = <20>;    
-        };
-
-        &msc {
-            time-to-max-speed-ms = <0>;
-            acceleration-exponent = <0>;
         };
 
         lt_mkp: lt_mkp {

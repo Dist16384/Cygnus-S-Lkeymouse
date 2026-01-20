@@ -167,6 +167,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+　　　　　encoder_msc_down_up: encoder_msc_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_DOWN_UP";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+        };
     };
 
     keymap {
@@ -255,7 +262,7 @@
 &trans                     &trans     &trans     &to 0            &trans             &trans        &kp PAGE_UP  &kp PAGE_DOWN                                              &trans
             >;
 
-            sensor-bindings = <&ROTATE MOVE_DOWN MOVE_UP>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         /* Photoshop */

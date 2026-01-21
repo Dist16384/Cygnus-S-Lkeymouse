@@ -38,7 +38,7 @@
         device = <&trackball>;
 
         /* スクロールを細かく分解して端数を貯める（品質優先） */
-        input-processors = <&tb_wheel_rema 1 4>;
+        input-processors = <&tb_wheel_rema 1 6>;
     };
 };
 

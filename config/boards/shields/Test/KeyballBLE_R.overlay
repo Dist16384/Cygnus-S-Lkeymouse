@@ -37,8 +37,8 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        /* スクロールを細かく分解して端数を貯める（品質優先） */
-        input-processors = <&tb_wheel_rema 1 6>;
+        /* 速度は変えず、端数だけ貯める（品質優先） */
+        input-processors = <&tb_wheel_rema 1 1>;
     };
 };
 
@@ -80,7 +80,7 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
-        /* 既存のスクロールレイヤー設定は維持 */
+        /* スクロールレイヤー指定（既存設定維持） */
         scroll-layers = <5>;
     };
 };

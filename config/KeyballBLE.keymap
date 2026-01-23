@@ -11,7 +11,7 @@
 #define NUM 6
 
 &msc {
-    time-to-max-speed-ms = <200>;
+    time-to-max-speed-ms = <230>;
     acceleration-exponent = <1>;
 };
 

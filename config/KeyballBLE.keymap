@@ -117,7 +117,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-            tap-ms = <100>;
+            tap-ms = <200>;
         };
 
         lt_mkp: lt_mkp {
@@ -241,10 +241,10 @@
 
         SCROLL {
             bindings = <
-&trans          &trans          &trans        &trans            &trans                                       &trans     &kt RIGHT_ALT  &trans  &kp RIGHT_CONTROL  &trans
-&mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT   &trans  &to 0                 &trans         &trans     &trans         &trans  &trans             &trans
-&trans          &trans          &trans        &trans            &trans  &trans                &trans         &trans     &trans         &trans  &trans             &trans
-&trans          &trans          &trans        &kp LG(NUMBER_9)  &trans  &kp LG(NUMBER_0)      &kp BACKSPACE  &kp ENTER                                            &trans
+&msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT   &trans                                       &trans     &kt RIGHT_ALT  &trans  &kp RIGHT_CONTROL  &trans
+&mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &trans  &to 0                 &trans         &trans     &trans         &trans  &trans             &trans
+&trans          &trans          &trans          &trans            &trans  &trans                &trans         &trans     &trans         &trans  &trans             &trans
+&trans          &trans          &trans          &kp LG(NUMBER_9)  &trans  &kp LG(NUMBER_0)      &kp BACKSPACE  &kp ENTER                                            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
@@ -267,7 +267,7 @@
 &trans                     &trans     &trans     &to 0            &trans             &trans        &kp PAGE_UP  &kp PAGE_DOWN                                              &trans
             >;
 
-            sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&rotate>i;
         };
 
         /* Photoshop */

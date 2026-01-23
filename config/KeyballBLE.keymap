@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 12    // default: 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 120    // default: 10
 
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
@@ -11,8 +11,8 @@
 #define NUM 6
 
 &msc {
-    time-to-max-speed-ms = <250>;
-    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <0>;
 };
 
 &mt {
@@ -124,7 +124,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-            tap-ms = <60>;
+            tap-ms = <20>;
         };
 
         lt_mkp: lt_mkp {
@@ -274,7 +274,7 @@
 &trans                     &trans     &trans     &to 0            &trans             &trans        &kp PAGE_UP  &kp PAGE_DOWN                                      &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&rotate>;
         };
 
         /* Photoshop */

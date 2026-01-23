@@ -11,7 +11,7 @@
 #define NUM 6
 
 &msc {
-    time-to-max-speed-ms = <230>;
+    time-to-max-speed-ms = <400>;
     acceleration-exponent = <1>;
 };
 
@@ -115,9 +115,8 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "ROTATE";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
-            tap-ms = <200>;
         };
 
         lt_mkp: lt_mkp {

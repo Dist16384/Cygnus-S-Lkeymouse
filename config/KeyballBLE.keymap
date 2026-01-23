@@ -214,7 +214,7 @@
 &trans                      &trans           &trans           &to 0            &trans        &trans             &kp BACKSPACE   &kp ENTER                                                                  &kp PIPE
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(Y) LS(Z)>;
+            sensor-bindings = <&inc_dec_kp LA(RIGHT_ARROW) LA(LEFT_ARROW)>;
         };
 
         ARROW {

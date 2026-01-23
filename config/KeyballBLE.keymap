@@ -111,6 +111,13 @@
             hold-trigger-key-positions = <26>;
         };
 
+        enc_scroll: enc_scroll {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "ENC_SCROLL";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+        };
+
         rotate: rotate {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ROTATE";
@@ -177,7 +184,7 @@
         encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
-            #sensor-binding-cells = <0>;
+            #sensor-binding-cells = <2>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
             tap-ms = <20>;
@@ -270,7 +277,7 @@
 &trans                     &trans     &trans     &to 0            &trans             &trans        &kp PAGE_UP  &kp PAGE_DOWN                                              &trans
             >;
 
-            sensor-bindings = <&rotate>;
+            sensor-bindings = <&enc_scroll SCRL_DOWN SCRL_UP>;
         };
 
         /* Photoshop */

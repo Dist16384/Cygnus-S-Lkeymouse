@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 16    // default: 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 12    // default: 10
 
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
@@ -11,7 +11,7 @@
 #define NUM 6
 
 &msc {
-    time-to-max-speed-ms = <250>;
+    time-to-max-speed-ms = <200>;
     acceleration-exponent = <1>;
 };
 

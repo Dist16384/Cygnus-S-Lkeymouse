@@ -11,8 +11,8 @@
 #define NUM 6
 
 &msc {
-    time-to-max-speed-ms = <0>;
-    acceleration-exponent = <0>;
+    time-to-max-speed-ms = <250>;
+    acceleration-exponent = <1>;
 };
 
 &mt {

@@ -267,7 +267,7 @@
 &trans                     &trans     &trans     &to 0            &trans             &trans        &kp PAGE_UP  &kp PAGE_DOWN                                              &trans
             >;
 
-            sensor-bindings = <&rotate>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         /* Photoshop */

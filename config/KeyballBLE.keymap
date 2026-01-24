@@ -221,7 +221,7 @@
 &trans                      &trans           &trans           &to 0            &trans        &trans             &kp BACKSPACE   &kp ENTER                                                                  &kp PIPE
             >;
 
-            sensor-bindings = <&inc_dec_kp LA(RIGHT_ARROW) LA(LEFT_ARROW)>;
+            sensor-bindings = <&inc_dec_kp LG(TAB) LS(LG(TAB))>;
         };
 
         ARROW {
@@ -232,7 +232,7 @@
 &trans          &trans                  &trans          &to 0                    &trans   &trans      &kp BACKSPACE  &kp ENTER                                                     &kp RG(Z)
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(LS(DELETE)) LC(BACKSPACE)>;
+            sensor-bindings = <&inc_dec_kp DELETE BACKSPACE>;
         };
 
         MOUSE {
@@ -243,7 +243,7 @@
 &trans          &trans          &trans          &drag_on         &mkp MB1   &drag_off      &to 0          &drag_on                                          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LG(RBKT) LG(LBKT)>;
+            sensor-bindings = <&inc_dec_kp F14 F15>;
         };
 
         SCROLL {

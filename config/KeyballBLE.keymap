@@ -221,7 +221,7 @@
 &trans                      &trans           &trans           &to 0            &trans        &trans             &kp BACKSPACE   &kp ENTER                                                                  &kp PIPE
             >;
 
-            sensor-bindings = <&inc_dec_kp LG(TAB) LS(LG(TAB))>;
+            sensor-bindings = <&inc_dec_kp TAB TAB>;
         };
 
         ARROW {
@@ -232,7 +232,7 @@
 &trans          &trans                  &trans          &to 0                    &trans   &trans      &kp BACKSPACE  &kp ENTER                                                     &kp RG(Z)
             >;
 
-            sensor-bindings = <&inc_dec_kp DELETE BACKSPACE>;
+            sensor-bindings = <&inc_dec_kp LG(TAB) LS(LG(TAB))>;
         };
 
         MOUSE {

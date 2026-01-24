@@ -239,7 +239,7 @@
             bindings = <
 &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp LG(R)                                &kp LG(Z)  &kp PAGE_UP  &kp PAGE_DOWN  &kp LG(C)  &kp LG(V)
 &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &mkp MB2   &to 0          &kp LC(LS(W))  &mkp MB3   &mkp MB2     &mkp MB1       &none      &lt 5 SPACE
-&trans          &trans          &mkp MB4        &mkp MB5         &mkp MB3   &mkp MB1       &trans         &drag_off  &mkp MB4     &mkp MB5       &kp LG(X)  &kp LG(A)
+&kp HOME        &kp END         &mkp MB4        &mkp MB5         &mkp MB3   &mkp MB1       &kp ESC        &drag_off  &mkp MB4     &mkp MB5       &kp LG(X)  &kp LG(A)
 &trans          &trans          &trans          &drag_on         &mkp MB1   &drag_off      &to 0          &drag_on                                          &trans
             >;
 

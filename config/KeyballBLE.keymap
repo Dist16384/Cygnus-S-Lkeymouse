@@ -70,6 +70,16 @@
             bindings = <&drag_off>;
             key-positions = <20 19>;
         };
+
+        key1 {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <16 17>;
+        };
+
+        key2 {
+            bindings = <&kp QUESTION>;
+            key-positions = <28 29>;
+        };
     };
 
     macros {

@@ -205,7 +205,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R        &kp T                                                              &kp Y            &kp U                &lt 5 I      &kp O         &mt RIGHT_SHIFT P
-&kp A             &kp S         &kp D         &kp F        &lt 7 G             &kt LEFT_SHIFT       &lt_to_layer_0 6 AT_SIGN  &kp H            &kp J                &kp K        &lt 4 L       &mt LS(RIGHT_GUI) MINUS
+&kp A             &kp S         &kp D         &kp F        &lt 7 G             &kt LEFT_SHIFT       &lt_to_layer_0 6 AT_SIGN  &kp H            &kp J                &kp K        &lt 4 L       &mt LA(RIGHT_GUI) MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &mt LA(LEFT_GUI) B  &kp TAB              &mt RIGHT_ALT COLON       &mt RIGHT_GUI N  &mt RIGHT_CONTROL M  &lt 2 COMMA  &lt 3 PERIOD  &mt RC(RIGHT_GUI) PLUS
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 3 SPACE  &mkp MB1            &lt 2 LC(SPACE)      &kp BACKSPACE             &lt 1 ENTER                                                      &kp DELETE
             >;

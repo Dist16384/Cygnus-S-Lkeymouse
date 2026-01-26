@@ -248,10 +248,10 @@
 
         MOUSE {
             bindings = <
-&msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp LG(T)                            &kp LG(Z)  &kp PAGE_UP  &kp PAGE_DOWN  &kp LG(A)  &kp LC(H)
-&mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &mkp MB2   &to 0          &kp ESC    &mkp MB3   &mkp MB2     &mkp MB1       &none      &lt 5 SPACE
-&kp HOME        &kp END         &mkp MB4        &mkp MB5         &mkp MB3   &mkp MB1       &kp LG(C)  &kp LG(V)  &mkp MB4     &mkp MB5       &kp LG(X)  &kp LG(F)
-&trans          &trans          &trans          &drag_on         &mkp MB1   &drag_off      &drag_off  &drag_on                                          &trans
+&msc MOVE_RIGHT  &msc MOVE_UP    &msc MOVE_DOWN  &msc MOVE_LEFT   &kp LG(T)                            &kp LG(Z)  &mac MOVE_UP  &mac MOVE_DOWN  &kp LG(A)  &kp LC(H)
+&mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &mkp MB2   &to 0          &kp ESC    &mkp MB3   &mkp MB2      &mkp MB1        &none      &lt 5 SPACE
+&kp HOME         &kp END         &mkp MB4        &mkp MB5         &mkp MB3   &mkp MB1       &kp LG(C)  &kp LG(V)  &mkp MB4      &mkp MB5        &kp LG(X)  &kp LG(F)
+&trans           &trans          &trans          &drag_on         &mkp MB1   &drag_off      &drag_off  &drag_on                                            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp F14 F15>;
@@ -259,10 +259,10 @@
 
         SCROLL {
             bindings = <
-&msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT   &trans                                       &kp LEFT_SHIFT  &kp RIGHT_ALT  &trans  &kp RIGHT_CONTROL  &trans
-&mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &trans  &to 0                 &trans         &trans          &trans         &trans  &trans             &trans
-&trans          &trans          &trans          &trans            &trans  &trans                &trans         &trans          &trans         &trans  &trans             &trans
-&trans          &trans          &trans          &kp LG(NUMBER_9)  &trans  &kp LG(NUMBER_0)      &kp BACKSPACE  &kp ENTER                                                 &trans
+&msc MOVE_RIGHT  &msc MOVE_UP    &msc MOVE_DOWN  &msc MOVE_LEFT    &trans                                       &kp LEFT_SHIFT  &kp RIGHT_ALT  &trans  &kp RIGHT_CONTROL  &trans
+&mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &trans  &to 0                 &trans         &trans          &trans         &trans  &trans             &trans
+&trans           &trans          &trans          &trans            &trans  &trans                &trans         &trans          &trans         &trans  &trans             &trans
+&trans           &trans          &trans          &kp LG(NUMBER_9)  &trans  &kp LG(NUMBER_0)      &kp BACKSPACE  &kp ENTER                                                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;

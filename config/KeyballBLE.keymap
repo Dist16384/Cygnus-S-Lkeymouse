@@ -248,7 +248,7 @@
 
         MOUSE {
             bindings = <
-&msc MOVE_RIGHT  &msc MOVE_UP    &msc MOVE_DOWN  &msc MOVE_LEFT   &kp LG(T)                            &kp LG(Z)  &mac MOVE_UP  &mac MOVE_DOWN  &kp LG(A)  &kp LC(H)
+&msc MOVE_RIGHT  &msc MOVE_UP    &msc MOVE_DOWN  &msc MOVE_LEFT   &kp LG(T)                            &kp LG(Z)  &msc MOVE_UP  &msc MOVE_DOWN  &kp LG(A)  &kp LC(H)
 &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &mkp MB2   &to 0          &kp ESC    &mkp MB3   &mkp MB2      &mkp MB1        &none      &lt 5 SPACE
 &kp HOME         &kp END         &mkp MB4        &mkp MB5         &mkp MB3   &mkp MB1       &kp LG(C)  &kp LG(V)  &mkp MB4      &mkp MB5        &kp LG(X)  &kp LG(F)
 &trans           &trans          &trans          &drag_on         &mkp MB1   &drag_off      &drag_off  &drag_on                                            &trans

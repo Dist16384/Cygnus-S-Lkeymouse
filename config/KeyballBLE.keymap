@@ -258,10 +258,10 @@
 
         MOUSE {
             bindings = <
-&mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &kp LG(T)                            &kp LG(Z)   &msc MOVE_UP  &msc MOVE_DOWN  &kp LG(A)  &kp LC(H)
-&msc MOVE_RIGHT  &msc MOVE_DOWN  &msc MOVE_UP    &msc MOVE_LEFT   &mkp MB2   &to 0          &safari_reload_once    &mkp MB3      &mkp MB2        &mkp MB1   &none      &lt 5 SPACE
-&kp HOME         &kp END         &mkp MB4        &mkp MB5         &mkp MB3   &mkp MB1       &kp LG(C)  &kp LG(V)   &mkp MB4      &mkp MB5        &kp LG(X)  &kp LG(F)
-&trans           &trans          &trans          &drag_on         &mkp MB1   &drag_off      &drag_off  &drag_on                                             &trans
+&mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &kp LG(T)                                      &kp LG(Z)   &mkp MB5     &mkp MB4       &kp LG(A)  &kp LC(H)
+&msc MOVE_RIGHT  &msc MOVE_DOWN  &msc MOVE_UP    &msc MOVE_LEFT   &mkp MB2   &to 0          &safari_reload_once  &mkp MB3    &mkp MB2     &mkp MB1       &none      &lt 5 SPACE
+&kp HOME         &kp END         &mkp MB4        &mkp MB5         &mkp MB3   &mkp MB1       &kp LG(C)            &kp LG(V)   &msc MOVE_UP &msc MOVE_DOWN &kp LG(X)  &kp LG(F)
+&trans           &trans          &trans          &drag_on         &mkp MB1   &drag_off      &drag_off            &drag_on                                           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp F14 F15>;

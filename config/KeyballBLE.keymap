@@ -77,12 +77,12 @@
         };
 
         scrl_up {
-            bindings = <&msc SCRL_UP>;
+            bindings = <&msc MOVE_UP>;
             key-positions = <8 9>;
         };
 
         scrl_down {
-            bindings = <&msc SCRL_DOWN>;
+            bindings = <&msc MOVE_DOWN>;
             key-positions = <20 21>;
         };
     };

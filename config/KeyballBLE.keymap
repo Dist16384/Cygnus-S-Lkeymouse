@@ -271,7 +271,7 @@
 &trans               &trans          &trans        &kp LEFT_ARROW   &mkp MB1   &kp RIGHT_ARROW      &drag_off            &drag_on                                             &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&rotate>;
         };
 
         SCROLL {

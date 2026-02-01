@@ -143,7 +143,7 @@
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "ENC_SCROLL";
             #sensor-binding-cells = <2>;
-            bindings = <&msc MOVE_UP>, <&msc MOVE_DOWN>;
+            bindings = <&msc>, <&msc>;
         };
 
         rotate: rotate {

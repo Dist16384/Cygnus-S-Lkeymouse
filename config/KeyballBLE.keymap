@@ -78,12 +78,22 @@
 
         scrl_up {
             bindings = <&msc MOVE_UP>;
-            key-positions = <8 9>;
+            key-positions = <20 21>;
         };
 
         scrl_down {
             bindings = <&msc MOVE_DOWN>;
-            key-positions = <20 21>;
+            key-positions = <32 33>;
+        };
+
+        left_shift {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <0 1>;
+        };
+
+        right_shift {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <8 9>;
         };
     };
 

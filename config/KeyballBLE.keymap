@@ -231,10 +231,10 @@
 
         FUNCTION {
             bindings = <
-&kp F5   &kp F4   &kp F3   &kp F2   &kp F1                                                &kp LS(RIGHT_ARROW)  &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &kp LG(LS(RIGHT_ARROW))
-&kp F10  &kp F9   &kp F8   &kp F7   &lt 12 F6  &kp ESC                &kp LS(LEFT_ARROW)  &kp LEFT_ARROW       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(LS(LEFT_ARROW))
-&kp F11  &kp F17  &kp F16  &kp F15  &kp F14    &kp F13                &kp RG(A)           &kp RG(M)            &kp RG(Q)       &kp RG(W)       &kp RG(P)        &kp RS(RG(NUMBER_5))
-&kp F12  &kp F19  &kp F18  &to 0    &kp F20    &kp LG(BACKSPACE)      &kp BACKSPACE       &trans                                                                &kp RS(RG(NUMBER_4))
+&kp F5                &kp F4            &kp F3            &kp F2   &kp F1                                                &kp LS(RIGHT_ARROW)  &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &kp LG(LS(RIGHT_ARROW))
+&kp F10               &kp F9            &kp F8            &kp F7   &lt 12 F6  &kp ESC                &kp LS(LEFT_ARROW)  &kp LEFT_ARROW       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(LS(LEFT_ARROW))
+&mt LEFT_SHIFT F11    &kp F17           &kp F16           &kp F15  &kp F14    &kp F13                &kp RG(A)           &kp RG(M)            &kp RG(Q)       &kp RG(W)       &kp RG(P)        &kp RS(RG(NUMBER_5))
+&mt LEFT_CONTROL F12  &mt LEFT_GUI F19  &mt LEFT_ALT F18  &to 0    &kp F20    &kp LG(BACKSPACE)      &kp BACKSPACE       &trans                                                                &kp RS(RG(NUMBER_4))
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;

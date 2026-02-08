@@ -245,7 +245,7 @@
 &kp LEFT_ARROW      &kp LEFT_ARROW       &kp UP_ARROW     &kp RIGHT_ARROW  &kp RIGHT_ARROW                                     &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &mt LEFT_SHIFT RIGHT_PARENTHESIS
 &kp LEFT_ARROW      &kp LEFT_ARROW       &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp HOME         &kp C_MUTE      &kp UNDERSCORE     &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
 &kp LS(LEFT_ARROW)  &kp LS(RIGHT_ARROW)  &kp LS(LC(TAB))  &kp LC(TAB)      &kp END          &kp ESC         &kp DOUBLE_QUOTES  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans              &trans               &trans           &trans           &trans           &to 0           &kp BACKSPACE      &kp ENTER                                                                  &kp PIPE
+&trans              &trans               &trans           &to 0            &trans           &trans          &kp BACKSPACE      &kp ENTER                                                                  &kp PIPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -253,10 +253,10 @@
 
         NUM {
             bindings = <
-&kp KP_NUMBER_5       &kp KP_NUMBER_4  &kp KP_NUMBER_3  &kp KP_NUMBER_2  &kp KP_NUMBER_1                                    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5
-&kp KP_NUMBER_0       &kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7  &kp KP_NUMBER_6  &kp LS(EQUAL)      &kp EQUAL      &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0
-&mt LEFT_SHIFT COMMA  &kp PERIOD       &kp SLASH        &kp ASTERISK     &kp MINUS        &kp PLUS           &kp PLUS       &kp MINUS        &kp ASTERISK     &kp SLASH        &kp PERIOD       &kp COMMA
-&trans                &trans           &trans           &to 0            &trans           &trans             &kp BACKSPACE  &kp ENTER                                                           &kp RG(Z)
+&kp KP_NUMBER_5       &kp KP_NUMBER_4  &kp KP_NUMBER_3  &kp KP_NUMBER_2  &kp KP_NUMBER_1                               &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5
+&kp KP_NUMBER_0       &kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7  &kp KP_NUMBER_6  &kp CAPS      &kp EQUAL      &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0
+&mt LEFT_SHIFT COMMA  &kp PERIOD       &kp SLASH        &kp ASTERISK     &kp MINUS        &kp PLUS      &kp PLUS       &kp MINUS        &kp ASTERISK     &kp SLASH        &kp PERIOD       &kp COMMA
+&trans                &trans           &trans           &trans           &trans           &to 0         &kp BACKSPACE  &kp ENTER                                                           &kp RG(Z)
             >;
 
             sensor-bindings = <&inc_dec_kp TAB TAB>;

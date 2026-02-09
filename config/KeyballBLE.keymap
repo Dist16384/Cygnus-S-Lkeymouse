@@ -231,10 +231,10 @@
 
         FUNCTION {
             bindings = <
-&kp F5                &kp F4            &kp F3            &kp F2    &kp F1                                                &kp LS(RIGHT_ARROW)  &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &kp LC(TAB)
-&kp F10               &kp F9            &kp F8            &kp F7    &lt 12 F6  &kp ESC                &kp LS(LEFT_ARROW)  &kp LEFT_ARROW       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LS(LC(TAB))
-&mt LEFT_SHIFT F11    &kp F17           &kp F16           &kp F15   &kp F14    &kp F13                &kp RG(A)           &kp RG(M)            &kp RG(Q)       &kp RG(W)       &kp RG(P)        &kp RS(RG(NUMBER_5))
-&mt LEFT_CONTROL F12  &mt LEFT_GUI F19  &mt LEFT_ALT F18  &kp CAPS  &kp F20    &kp LG(BACKSPACE)      &kp BACKSPACE       &trans                                                                &kp RS(RG(NUMBER_4))
+&kp F5                &kp F4            &kp F3            &kp F2    &kp F1                                              &kp LS(RIGHT_ARROW)  &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &kp LC(TAB)
+&kp F10               &kp F9            &kp F8            &kp F7    &kp F6   &kp ESC                &kp LS(LEFT_ARROW)  &kp LEFT_ARROW       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LS(LC(TAB))
+&mt LEFT_SHIFT F11    &kp F17           &kp F16           &kp F15   &kp F14  &kp F13                &kp RG(A)           &kp RG(M)            &kp RG(Q)       &kp RG(W)       &kp RG(P)        &kp RS(RG(NUMBER_5))
+&mt LEFT_CONTROL F12  &mt LEFT_GUI F19  &mt LEFT_ALT F18  &kp CAPS  &kp F20  &kp LG(BACKSPACE)      &kp BACKSPACE       &trans                                                                &kp RS(RG(NUMBER_4))
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
@@ -259,7 +259,7 @@
 &trans                &trans           &trans           &trans           &trans           &to 0         &kp BACKSPACE  &kp ENTER                                                           &kp RG(Z)
             >;
 
-            sensor-bindings = <&inc_dec_kp TAB TAB>;
+            sensor-bindings = <&inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
         MOUSE {
@@ -276,12 +276,12 @@
         SCROLL {
             bindings = <
 &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT   &trans                                      &kp LEFT_SHIFT  &kp RIGHT_ALT  &trans  &kp RIGHT_CONTROL  &trans
-&msc MOVE_RIGHT  &msc MOVE_DOWN  &msc MOVE_UP  &msc MOVE_LEFT    &trans  &to 0                 &trans        &trans          &trans         &trans  &trans             &trans
+&msc MOVE_RIGHT  &msc MOVE_DOWN  &msc MOVE_UP  &msc MOVE_LEFT    &mo 12  &to 0                 &trans        &trans          &trans         &trans  &trans             &trans
 &trans           &trans          &trans        &trans            &trans  &trans                &trans        &trans          &trans         &trans  &trans             &trans
 &trans           &trans          &trans        &kp LG(NUMBER_9)  &trans  &kp LG(NUMBER_0)      &kp UP_ARROW  &kp DOWN_ARROW                                            &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
+            sensor-bindings = <&inc_dec_kp LG(LA(MINUS)) LG(LA(PLUS))>;
         };
 
         Bluetooth {
@@ -350,7 +350,7 @@
             sensor-bindings = <&inc_dec_kp F15 F14>;
         };
 
-        bright {
+        zoom {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
@@ -358,7 +358,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_BRI_DN C_BRI_UP>;
+            sensor-bindings = <&inc_dec_kp LG(MINUS) LG(PLUS)>;
         };
     };
 };

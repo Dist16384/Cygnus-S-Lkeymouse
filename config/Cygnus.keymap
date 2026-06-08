@@ -29,7 +29,7 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
-         };
+        };
     };
 
     behaviors {
@@ -118,7 +118,7 @@
 &trans  &trans  &trans    &trans    &trans         &trans      &trans  &trans                                                 &trans
             >;
 
-            sensor-bindings = <&rotate>;
+            sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
         };
 
         layer_6 {
